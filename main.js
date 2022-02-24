@@ -1,14 +1,16 @@
-const App1 = {
+const app = Vue.createApp({
     data() {
         return {
-            count: 0
+            shopping: "",
+            items: []
         }
     },
     methods: {
-        increment: function () {
-            this.count += 1
+        addItem() {
+            this.items.push(this.shopping)
+            console.log(this.items)
         }
     }
-}
+})
 
-Vue.createApp(App1).mount('#app')
+const vm = app.mount('#app')

@@ -5,17 +5,26 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/vue@next"></script>
 </head>
 
 <body>
-
-    <div id="app">
-        <p>{{ count }}回喚きました</p>
-        <button v-on:click="increment">喚きます</button>
-    </div>
+   <header>
+        <h1>お買い物メモ</h1>
+   </header>
+   <div class="contents" id="app">
+     <form>
+         <input type="text" v-model="shopping">
+         <button v-on:click.prevent="addItem">追加</button>
+         <ul>
+             <li v-for="item in items">
+                 {{ item }}
+             </li>
+         </ul>
+     </form>
+   </div>
 
 </body>
+<script src="https://unpkg.com/vue@next"></script>
 <script src="main.js"></script>
 
 </html>
