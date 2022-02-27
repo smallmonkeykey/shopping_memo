@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
 
 <body>
@@ -13,8 +14,8 @@
    </header>
    <div class="contents" id="app">
      <form>
-         <input type="text" v-model="shopping">
-         <button v-on:click.prevent="addItem">追加</button>
+         <input type="text" v-model="inputItem" >
+         <button v-on:click.prevent="addItem()">追加</button>
          <ul>
              <li v-for="item in items">
                  {{ item }}
@@ -24,7 +25,7 @@
    </div>
 
 </body>
-<script src="https://unpkg.com/vue@next"></script>
+
 <script src="main.js"></script>
 
 </html>

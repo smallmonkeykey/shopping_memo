@@ -1,14 +1,15 @@
 const app = Vue.createApp({
     data() {
         return {
-            shopping: "",
-            items: []
+            inputItem: "",
+            items: JSON.parse(localStorage.getItem("items")) || []
         }
     },
     methods: {
         addItem() {
-            this.items.push(this.shopping)
-            console.log(this.items)
+            this.items.push(this.inputItem)
+            this.inputItem = ""
+            localStorage.setItem("items", JSON.stringify(this.items))
         }
     }
 })
