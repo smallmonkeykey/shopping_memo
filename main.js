@@ -10,7 +10,13 @@ const app = Vue.createApp({
             this.items.push(this.inputItem)
             this.inputItem = ""
             localStorage.setItem("items", JSON.stringify(this.items))
-        }
+        },
+        removeItem(name) {
+            let items = this.items; // ['skajkj', 'iii']
+            // リストからアイテム削除 ['skajkj'] name = "iii"の時
+            localStorage.setItem("items", JSON.stringify(items))
+          }
+
     }
 })
 

@@ -14,13 +14,17 @@
    </header>
    <div class="contents" id="app">
      <form>
-         <input type="text" v-model="inputItem" >
-         <button v-on:click.prevent="addItem()">追加</button>
-         <ul>
-             <li v-for="item in items">
-                 {{ item }}
-             </li>
-         </ul>
+         <div class="headWrapper">
+            <input type="text" v-model="inputItem" class="inputtext">
+            <button v-on:click.prevent="addItem()" class="button">追加</button>
+         </div>
+         <div class="mainWrap">
+            <ul>
+                <li v-for="item in items">
+                    {{ item }}
+                </li>
+            </ul>
+        </div>
      </form>
    </div>
 

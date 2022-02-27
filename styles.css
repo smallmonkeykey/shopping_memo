@@ -1,0 +1,37 @@
+h1 {
+    background: #dfefff;
+    padding: 10px 15px;
+    text-align: center;
+    color: rgb(112, 112, 112);
+}
+
+body {
+    background: #dfefff;
+}
+
+.inputtext {
+    width: 500px;
+}
+
+.button {
+    border-radius: 10px;
+    background-color: #add3fa;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 20px;
+}
+
+.headWrapper {
+    text-align: center;
+}
+
+.mainWrap li {
+    width: 500px;
+    background-color: white;
+    list-style-type: none
+}
+
+.mainWrap ul {
+    padding: 0;
+    position: relative;
+}
