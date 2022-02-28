@@ -9,14 +9,17 @@ const app = Vue.createApp({
         addItem() {
             this.items.push(this.inputItem)
             this.inputItem = ""
-            localStorage.setItem("items", JSON.stringify(this.items))
+            this.saveToStorage();
         },
-        removeItem(name) {
-            let items = this.items; // ['skajkj', 'iii']
-            // リストからアイテム削除 ['skajkj'] name = "iii"の時
-            localStorage.setItem("items", JSON.stringify(items))
-          }
-
+        removeItem(event){
+            const item = event.target.innerText;
+            const index = this.items.indexOf(item);
+            this.items.splice(index, 1)
+            this.saveToStorage();
+        },
+        saveToStorage(){
+            localStorage.setItem("items", JSON.stringify(this.items))
+        }
     }
 })
 
