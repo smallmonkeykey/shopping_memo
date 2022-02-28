@@ -18,7 +18,7 @@
             <input type="text" v-model="inputItem" class="inputtext">
             <button v-on:click.prevent="addItem()" class="button">追加</button>
          </div>
-         <div class="mainWrap">
+         <div class="list">
             <ul>
                 <li v-for="item in items" @click="removeItem">
                     {{ item }}
